@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: "About Me"
 permalink: /about/
 ---
@@ -11,6 +11,5 @@ I'm a mechanical engineering student and Formula SAE driver with experience in:
 - Chassis design
 - FEA and structural validation
 - Manufacturing and jigging
-- Testing and driver feedback
 
 This site documents my engineering work and projects.

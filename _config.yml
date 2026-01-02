@@ -3,5 +3,9 @@ baseurl: ""
 url: "https://jamesvallee.ca"
 theme: minima
 collections:
-  projects:
+  fsae:
     output: true
+    permalink: /fsae/:name/
+  personal:
+    output: true
+    permalink: /personal/:name/

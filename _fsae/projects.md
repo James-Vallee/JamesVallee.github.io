@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: project
 title: Projects
+category: FSAE
 permalink: /projects/
 ---
 
@@ -10,10 +11,10 @@ permalink: /projects/
 - CAD Modeling
 - Finite Element Analysis
 - Manufacturing & Testing
-![Chassis](assets/images/FSAE26-FR10001.png)
+![Chassis](/assets/images/FSAE26-FR10001.png)
 
 
 ## CAD & FEA Work
 - Component design
 - Simulation & optimization
-![CAD Example](assets/images/cad_example.png)
+![CAD Example](/assets/images/cad_example.png)

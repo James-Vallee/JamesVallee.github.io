@@ -4,28 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 2rem; line-height: 1.6; }
-    header { margin-bottom: 2rem; }
-    nav a { margin-right: 1rem; text-decoration: none; color: #333; font-weight: bold; }
-    h1, h2 { color: #222; }
-    img { max-width: 100%; height: auto; margin: 1rem 0; }
-    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #666; }
-  </style>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
+
 <body>
+  <!-- Header Nav -->
   <header>
-    <nav>
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/projects/' | relative_url }}">Projects</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
-    </nav>
+    <div class="header-content">
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}" class="{% if page.nav == 'home' %}active{% endif %}">Home</a>
+        <a href="{{ '/fsae/' | relative_url }}" class="{% if page.nav == 'fsae' %}active{% endif %}">FSAE Projects</a>
+        <a href="{{ '/personal/' | relative_url }}" class="{% if page.nav == 'personal' %}active{% endif %}">Personal Projects</a>
+        <a href="{{ '/about/' | relative_url }}" class="{% if page.nav == 'about' %}active{% endif %}">About</a>
+      </nav>
+    </div>
   </header>
 
-  {{ content }}
+  <!-- Banner / Hero (full-width) -->
+  {% if page.banner_image %}
+  <section class="banner" style="background-image: url('{{ page.banner_image | relative_url }}');">
+    <div class="overlay"></div>
+    <div class="banner-content">
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p>{{ page.subtitle }}</p>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
 
+  <!-- Page content centered -->
+  <main class="page-content">
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
   <footer>
-    &copy; {{ "now" | date: "%Y" }} James Vallée
+    <div class="page-content">
+      &copy; {{ "now" | date: "%Y" }} James Vallée
+    </div>
   </footer>
 </body>
 </html>

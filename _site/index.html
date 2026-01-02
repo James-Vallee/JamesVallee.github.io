@@ -3,49 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 2rem; line-height: 1.6; }
-    header { margin-bottom: 2rem; }
-    nav a { margin-right: 1rem; text-decoration: none; color: #333; font-weight: bold; }
-    h1, h2 { color: #222; }
-    img { max-width: 100%; height: auto; margin: 1rem 0; }
-    footer { margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #666; }
-  </style>
+  <title>James Vallée</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
+
 <body>
+  <!-- Header Nav -->
   <header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/projects/">Projects</a>
-      <a href="/about/">About</a>
-    </nav>
+    <div class="header-content">
+      <nav class="nav">
+        <a href="/" class="active">Home</a>
+        <a href="/fsae/" class="">FSAE Projects</a>
+        <a href="/personal/" class="">Personal Projects</a>
+        <a href="/about/" class="">About</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-  <h1>Hi, I'm James Vallee</h1>
-  <p>Mechanical Engineering Student | FSAE Driver | Portfolio</p>
-</section>
+  <!-- Banner / Hero (full-width) -->
+  
+  <section class="banner" style="background-image: url('/assets/images/fsae_ic_25_00446.jpg');">
+    <div class="overlay"></div>
+    <div class="banner-content">
+      <h1>James Vallée</h1>
+      
+      <p>Mechanical Engineering Student | Formula uOttawa FSAE Technical Director<br>My Portfolio</p>
+      
+    </div>
+  </section>
+  
 
-<section class="featured-projects">
-  <h2>Projects</h2>
-  <div class="project-list">
-    
-    
-      <div class="project-card">
-        <a href="/projects/fsae-chassis">
-          <img src="" alt="Formula SAE Chassis">
-          <h3>Formula SAE Chassis</h3>
-          <p>Tubular spaceframe design, FEA, and manufacturing</p>
-        </a>
-      </div>
-    
+  <!-- Page content centered -->
+  <main class="page-content">
+    <!-- COLLECTION GRID SECTION -->
+<section class="featured-collections full-width">
+  <div class="page-content">
+    <h2>Explore My Work</h2>
+    <div class="collection-grid">
+      <!-- FSAE -->
+      <a href="/fsae/" class="collection-item"
+         style="background-image: url('/assets/images/DSC01991.jpg');">
+        <div class="overlay">
+          <div class="overlay-content">
+            <h3>FSAE Projects</h3>
+          </div>
+        </div>
+      </a>
+
+      <!-- Personal Projects -->
+      <a href="/personal/" class="collection-item"
+         style="background-image: url('/assets/images/personal_banner.jpg');">
+        <div class="overlay">
+          <div class="overlay-content">
+            <h3>Personal Projects</h3>
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
+<!-- PROJECT GRID SECTION -->
+<section class="featured-projects full-width">
+  <div class="page-content">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      
+      
+        <a href="/fsae/fsae-chassis/"
+           class="project-item"
+           style="background-image: url('/assets/images/FSAE26-FR10001.png');">
+          <div class="overlay">
+            <div class="overlay-content">
+              <h3>Formula SAE Chassis</h3>
+              <span class="project-tag">FSAE</span>
+            </div>
+          </div>
+        </a>
+      
+        <a href="/projects/"
+           class="project-item"
+           style="background-image: url('');">
+          <div class="overlay">
+            <div class="overlay-content">
+              <h3>Projects</h3>
+              <span class="project-tag">FSAE</span>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </div>
+</section>
 
+  </main>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2026 James Vallée
+    <div class="page-content">
+      &copy; 2026 James Vallée
+    </div>
   </footer>
 </body>
 </html>

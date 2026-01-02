@@ -1,25 +1,56 @@
 ---
 layout: default
-title: Home
+title: James Vallée
+nav: home
+banner_image: /assets/images/fsae_ic_25_00446.jpg
+subtitle: Mechanical Engineering Student | Formula uOttawa FSAE Technical Director<br>My Portfolio 
 ---
+<!-- COLLECTION GRID SECTION -->
+<section class="featured-collections full-width">
+  <div class="page-content">
+    <h2>Explore My Work</h2>
+    <div class="collection-grid">
+      <!-- FSAE -->
+      <a href="{{ '/fsae/' | relative_url }}" class="collection-item"
+         style="background-image: url('/assets/images/DSC01991.jpg');">
+        <div class="overlay">
+          <div class="overlay-content">
+            <h3>FSAE Projects</h3>
+          </div>
+        </div>
+      </a>
 
-<section class="hero">
-  <h1>Hi, I'm James Vallee</h1>
-  <p>Mechanical Engineering Student | FSAE Driver | Portfolio</p>
+      <!-- Personal Projects -->
+      <a href="{{ '/personal/' | relative_url }}" class="collection-item"
+         style="background-image: url('/assets/images/personal_banner.jpg');">
+        <div class="overlay">
+          <div class="overlay-content">
+            <h3>Personal Projects</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
 
-<section class="featured-projects">
-  <h2>Projects</h2>
-  <div class="project-list">
-    {% assign sorted_projects = site.projects | sort: 'title' %}
-    {% for project in sorted_projects %}
-      <div class="project-card">
-        <a href="{{ project.url }}">
-          <img src="{{ project.image }}" alt="{{ project.title }}">
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.excerpt }}</p>
+<!-- PROJECT GRID SECTION -->
+<section class="featured-projects full-width">
+  <div class="page-content">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      {% assign all_projects = site.fsae | concat: site.personal | sort: 'title' %}
+      {% for project in all_projects %}
+        <a href="{{ project.url }}"
+           class="project-item"
+           style="background-image: url('{{ project.image }}');">
+          <div class="overlay">
+            <div class="overlay-content">
+              <h3>{{ project.title }}</h3>
+              <span class="project-tag">{{ project.category }}</span>
+            </div>
+          </div>
         </a>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </section>
