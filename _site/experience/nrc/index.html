@@ -13,6 +13,44 @@
   
 </head>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  // Swipe support
+  let startX = 0;
+
+  track.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) nextBtn.click();
+    if (endX - startX > 50) prevBtn.click();
+  });
+});
+</script>
+
 <body>
   <!-- Header Nav -->
   <header>
@@ -54,120 +92,127 @@
   <div class="page-content">
     <h2 id="overview">Overview</h2>
 
-<p>I worked as an Aerospace Research Intern within the Structures and Materials Performance group at the National Research Council of Canada. Over the course of a year, I contributed to experimental and analytical research activities supporting aircraft structural performance, materials characterization, and the development of digital twins for aerospace applications.</p>
+<p>I worked as an <strong>Aerospace Research Intern</strong> within the <em>Structures and Materials Performance</em> group at the National Research Council of Canada.</p>
 
-<p>The role combined hands-on laboratory work, coordination of testing activities, and detailed engineering documentation in a research environment with expectations of publication-quality rigor.</p>
+<p>My role spanned <strong>multiple independent research projects</strong>, each conducted under different supervisors and focused on distinct aspects of aerospace materials, experimental mechanics, and structural modeling.</p>
+
+<p>The position combined <strong>hands-on experimental testing</strong>, coordination of complex research logistics, and <strong>publication-quality data analysis and documentation</strong>, supporting long-term research initiatives in aircraft structural performance and digital twin development.</p>
 
 <hr />
 
-<div class="project-section">
-  <div class="section-text">
-    <h3>Aircraft Structure Reverse Engineering &amp; Digital Twins</h3>
-    <p>
-      A key component of my work involved reverse engineering aircraft structural components to support the development of digital twins. This included detailed measurement, documentation, and interpretation of structural geometry, material layups, and load paths.
-    </p>
-    <p>
-      The resulting models and documentation were used to inform analytical and simulation-based studies aimed at better representing real-world structural behavior in digital environments.
-    </p>
+<h2 id="composite-impact-testing-of-carbon-fiber-laminates">Composite Impact Testing of Carbon Fiber Laminates</h2>
+
+<p>This research project focused on the <strong>impact behavior of carbon fiber composite panels</strong> with controlled layup sequences and impact configurations. The objective was to characterize damage initiation and progression under impact loading and to generate experimentally validated datasets suitable for publication.</p>
+
+<p>I supported the <strong>entire experimental lifecycle</strong>, from specimen preparation to post-test inspection and reporting.</p>
+
+<h3 id="key-contributions">Key Contributions</h3>
+<ul>
+  <li>Coordinated logistics for composite specimen preparation, machining, fabrication, and testing</li>
+  <li>Managed large experimental test matrices involving multiple layup sequences and impact conditions</li>
+  <li>Conducted and documented <strong>impact testing</strong> on composite plates</li>
+  <li>Supported <strong>non-destructive inspection (NDI)</strong> to assess post-impact damage</li>
+  <li>Maintained detailed specimen tracking and test records using structured Excel workflows</li>
+  <li>Performed data processing, visualization, and result summarization</li>
+  <li>Contributed to the writing of a <strong>published technical research paper</strong></li>
+  <li>Collaborated closely with researchers, technicians, and external suppliers</li>
+</ul>
+
+<div class="carousel">
+  <button class="carousel-btn prev">‹</button>
+
+  <div class="carousel-track">
+    <div class="carousel-slide">
+      <img src="/assets/images/Cancom/Picture1.png" alt="Impact testing setup" />
+    </div>
+    <div class="carousel-slide">
+      <img src="/assets/images/Cancom/Picture2.png" alt="Damage comparison results" />
+    </div>
+    <div class="carousel-slide">
+      <img src="/assets/images/Cancom/Picture3.png" alt="Buckling effects on damage tolerance" />
+    </div>
   </div>
-  <div class="section-image">
-    <img src="/assets/images/nrc_structure_generic.jpg" alt="Aircraft structural analysis illustration" />
-  </div>
+
+  <button class="carousel-btn next">›</button>
 </div>
 
+<p class="figure-caption">
+  Selected figures reproduced from: <em>Understanding the Effect of Global Buckling on Composites Damage Tolerance</em>, CANCOM 2024.
+</p>
+
+<p><a href="https://www.cacsma.ca/wp-content/uploads/2024/10/CANCOM_2024_paper_90.pdf" target="_blank" class="button">
+  Read the full paper (PDF)
+</a></p>
+
 <hr />
 
-<div class="project-section reverse">
-  <div class="section-text">
-    <h3>Composite &amp; Metallic Materials Testing</h3>
-    <p>
-      I supported the full testing lifecycle for composite materials and metal alloys, coordinating logistics related to specimen preparation, machining, fabrication, and mechanical testing. This involved working closely with researchers, technicians, and external suppliers to ensure test readiness.
-    </p>
-    <p>
-      My hands-on work included prepreg carbon fiber layups, specimen preparation, and instrumentation for mechanical testing, providing direct exposure to aerospace-grade composite manufacturing and experimental procedures.
-    </p>
-  </div>
-  <div class="section-image">
-    <img src="/assets/images/nrc_composites_generic.jpg" alt="Composite materials testing illustration" />
-  </div>
+<h2 id="high-temperature-fatigue-testing-of-metallic-alloys">High-Temperature Fatigue Testing of Metallic Alloys</h2>
+
+<p>In a separate research stream, I supported <strong>high-temperature fatigue testing</strong> of metallic alloys used in aerospace structures. This work was highly hands-on and focused on experimental setup, instrumentation, and monitoring of fatigue and crack growth behavior.</p>
+
+<h3 id="key-contributions-1">Key Contributions</h3>
+<ul>
+  <li>Assisted with <strong>test setup and execution</strong> on MTS mechanical testing systems</li>
+  <li>Instrumented specimens using <strong>microwelding</strong> and strain gauge installation</li>
+  <li>Conducted <strong>low-cycle fatigue (LCF)</strong> testing under controlled conditions</li>
+  <li>Used optical microscopy to measure and track <strong>crack growth</strong></li>
+  <li>Generated and reviewed crack growth reports using <strong>macro-enabled Excel tools</strong></li>
+  <li>Supported data quality assurance and experimental repeatability</li>
+</ul>
+
+<hr />
+
+<h2 id="aircraft-structure-reverse-engineering-for-digital-twin-support">Aircraft Structure Reverse Engineering for Digital Twin Support</h2>
+
+<p>This project involved the <strong>reverse engineering of a helicopter rotor blade cross-section</strong> to support digital twin research efforts. The goal was to create an accurate geometric and material representation suitable for downstream structural analysis.</p>
+
+<p>While I did not develop the digital twin itself, my work provided <strong>validated structural inputs</strong> for digital twin modeling efforts.</p>
+
+<h3 id="key-contributions-2">Key Contributions</h3>
+<ul>
+  <li>Digitized and reconstructed rotor blade cross-sections</li>
+  <li>Created detailed CAD models using <strong>Autodesk Inventor</strong></li>
+  <li>Assigned material properties, meshing and prepared analysis-ready models in <strong>ANSYS</strong></li>
+  <li>Exported structural data to <strong>NASTRAN-compatible formats</strong></li>
+  <li>Used <strong>VABS</strong> to compute composite section properties</li>
+  <li>Documented modeling assumptions, geometry fidelity, and material definitions</li>
+</ul>
+
+<hr />
+
+<div class="tools-skills-highlight">
+
+<div class="tools-skills-lists">
+
+<div class="tools-used">
+<h3>Tools Used</h3>
+<ul>
+  <li>Excel (data processing, specimen tracking, macro-enabled reports)</li>
+  <li>Autodesk Inventor</li>
+  <li>ANSYS Mechanical</li>
+  <li>VABS</li>
+  <li>MTS fatigue load frame</li>
+  <li>Optical microscopy</li>
+  <li>Microwelding and strain gauge instrumentation</li>
+</ul>
 </div>
 
-<hr />
-
-<div class="project-section">
-  <div class="section-text">
-    <h3>Mechanical Testing &amp; Experimental Coordination</h3>
-    <p>
-      I assisted with the execution of mechanical tests, supporting setup, instrumentation, and monitoring of experiments. This work required careful coordination of equipment availability, test scheduling, and adherence to experimental protocols.
-    </p>
-    <p>
-      Through this process, I developed an understanding of how experimental constraints, data quality, and repeatability influence the reliability of structural performance assessments.
-    </p>
-  </div>
-  <div class="section-image">
-    <img src="/assets/images/nrc_testing_generic.jpg" alt="Mechanical testing illustration" />
-  </div>
+<div class="skills-developed">
+<h3>Engineering Skills Developed</h3>
+<ul>
+  <li>Experimental mechanics &amp; mechanical testing</li>
+  <li>Composite and metallic materials characterization</li>
+  <li>Prepreg autoclave layups and composite manufacturing processes</li>
+  <li>Data analysis and visualization</li>
+  <li>Structural reverse engineering</li>
+  <li>Test planning, coordination, and documentation</li>
+  <li>Technical reporting &amp; engineering communication</li>
+</ul>
 </div>
 
-<hr />
-
-<div class="project-section reverse">
-  <div class="section-text">
-    <h3>Data Analysis, Documentation &amp; Research Reporting</h3>
-    <p>
-      Following testing activities, I performed data analysis and contributed to technical documentation and reporting. I worked extensively with <strong>Excel</strong> to process experimental results, generate plots, and summarize findings for internal research use.
-    </p>
-    <p>
-      The work was conducted with the expectation of publication-quality documentation, reinforcing best practices in data traceability, clarity, and engineering communication within a scientific research context.
-    </p>
-  </div>
-  <div class="section-image">
-    <img src="/assets/images/nrc_data_generic.jpg" alt="Engineering data analysis illustration" />
-  </div>
+</div>
 </div>
 
-<hr />
-
-<div class="project-section">
-  <div class="section-text">
-    <h3>Composite Impact Testing Research &amp; Technical Paper</h3>
-    <p>
-      As part of my work at the National Research Council of Canada, I authored a technical research paper focused on impact testing of composite materials. This project investigated the damage mechanisms and structural response of composite laminates subjected to controlled impact loading.
-    </p>
-    <p>
-      The work involved defining test objectives, preparing composite specimens, executing impact tests, and analyzing post-impact damage. Emphasis was placed on correlating experimental observations with material behavior and documenting results with publication-level rigor.
-    </p>
-    <p>
-      I was responsible for experimental planning, data analysis, and technical writing, contributing to a structured research document intended for internal review and potential publication.
-    </p>
-  </div>
-  <div class="section-image">
-    <img src="/assets/images/nrc_composite_impact_setup.jpg" alt="Composite impact testing setup" />
-  </div>
-</div>
-
-<hr />
-
-<div class="project-section reverse">
-  <div class="section-text">
-    <h3>Experimental Methodology &amp; Data Interpretation</h3>
-    <p>
-      The research required careful control of test parameters, specimen preparation, and instrumentation to ensure repeatability and data quality. Impact response, damage initiation, and failure progression were evaluated using a combination of experimental measurements and post-test inspection.
-    </p>
-    <p>
-      Data was processed and visualized using <strong>Excel</strong>, with results presented through plots, tables, and annotated figures suitable for a technical audience. The analysis emphasized clarity, traceability, and consistency with established composite testing standards.
-    </p>
-  </div>
-  <div class="section-image">
-    <img src="/assets/images/nrc_composite_impact_results.jpg" alt="Composite impact test results visualization" />
-  </div>
-</div>
-
-<hr />
-
-<h2 id="tools--engineering-skills">Tools &amp; Engineering Skills</h2>
-
-<p>This role emphasized experimental mechanics, aerospace materials, and structural performance evaluation. I gained hands-on experience with composite manufacturing processes, mechanical testing instrumentation, experimental data analysis in Excel, and engineering documentation practices consistent with aerospace research and digital twin development.</p>
 
   </div>
 </article>
