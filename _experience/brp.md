@@ -37,7 +37,7 @@ Much of the work was conducted in a research and development context and is subj
 
 <div class="project-section reverse">
   <div class="section-text">
-    <h3>Spyder Suspension Modeling & Bump Steer Optimization</h3>
+    <h3>Suspension Modeling & Bump Steer Optimization</h3>
     <p>
       In parallel, I contributed to a smaller multibody dynamics project focused on suspension behavior for a three-wheeled vehicle platform. This involved editing and refining an existing <strong>Altair MotionView</strong> suspension model to study kinematic behavior.
     </p>
