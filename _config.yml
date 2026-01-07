@@ -9,3 +9,6 @@ collections:
   personal:
     output: true
     permalink: /personal/:name/
+  experience:
+    output: true
+    permalink: /experience/:name/

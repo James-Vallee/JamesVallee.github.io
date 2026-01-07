@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  
+  <!-- Favicon for Browsers -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/JV Block Logo.png">
+  <!-- Apple bookmark Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/JV Block Logo.png">
+
   {% if page.load_project_css %}
     <link rel="stylesheet" href="{{ '/assets/css/project.css' | relative_url }}">
   {% endif %}
@@ -23,9 +27,11 @@
       <!-- Navigation -->
       <nav class="nav">
         <a href="{{ '/' | relative_url }}" class="{% if page.nav == 'home' %}active{% endif %}">Home</a>
-        <a href="{{ '/fsae/' | relative_url }}" class="{% if page.nav == 'fsae' %}active{% endif %}">FSAE Projects</a>
-        <a href="{{ '/personal/' | relative_url }}" class="{% if page.nav == 'personal' %}active{% endif %}">Personal Projects</a>
+        <a href="{{ '/experience/' | relative_url }}" class="{% if page.nav == 'experience' %}active{% endif %}">Experience</a>
+        <a href="{{ '/fsae/' | relative_url }}" class="{% if page.nav == 'fsae' %}active{% endif %}">FSAE&nbsp;Projects</a>
+        <a href="{{ '/personal/' | relative_url }}" class="{% if page.nav == 'personal' %}active{% endif %}">Personal&nbsp;Projects</a>
         <a href="{{ '/about/' | relative_url }}" class="{% if page.nav == 'about' %}active{% endif %}">About</a>
+        
       </nav>
     </div>
   </header>
