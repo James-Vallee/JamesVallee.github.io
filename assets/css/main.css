@@ -362,7 +362,7 @@ section.full-width {
 /* Delimit project and collection items */
 .project-item,
 .collection-item {
-  border: 2px solid rgba(0,0,0,0.2); /* light gray border */
+  border: 2px solid rgb(233, 233, 233); /* light gray border */
   border-radius: 8px; /* keep corners rounded */
   overflow: hidden;
 }

@@ -12,7 +12,7 @@ subtitle: Engineering designs, builds, and racing projects for FSAE competitions
   <div class="page-content">
     <h2>All FSAE Projects</h2>
     <div class="project-grid">
-      {% assign sorted_projects = site.fsae | sort: 'title' %}
+      {% assign sorted_projects = site.fsae | sort: 'title' | reverse %}
       {% for project in sorted_projects %}
         <a href="{{ project.url }}"
            class="project-item"
