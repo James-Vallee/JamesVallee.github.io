@@ -8,14 +8,32 @@ location: Ottawa, Ontario
 start_date: 2024-01-01
 end_date: 2024-12-31
 ---
+<div class="overview-block">
+  <div class="overview-logo">
+    <img src="/assets/images/NRCC_logo.png" alt="National Research Council Canada Logo">
+  </div>
 
-## Overview
-
-I worked as an **Aerospace Research Intern** within the *Structures and Materials Performance* group at the National Research Council of Canada.
- 
-My role spanned **multiple independent research projects**, each conducted under different supervisors and focused on distinct aspects of aerospace materials, experimental mechanics, and structural modeling.
-
-The position combined **hands-on experimental testing**, coordination of complex research logistics, and **publication-quality data analysis and documentation**, supporting long-term research initiatives in aircraft structural performance and digital twin development.
+  <div class="overview-text">
+    <h2>Overview</h2>
+    <p>
+      I worked as an <strong>Aerospace Research Intern</strong> within the
+      <em>Structures and Materials Performance</em> group at the National Research
+      Council of Canada.
+    </p>
+    <p>
+      My role spanned <strong>multiple independent research projects</strong>, each
+      conducted under different supervisors and focused on distinct aspects of
+      aerospace materials, experimental mechanics, and structural modeling.
+    </p>
+    <p>
+      The position combined <strong>hands-on experimental testing</strong>,
+      coordination of complex research logistics, and
+      <strong>publication-quality data analysis and documentation</strong>,
+      supporting long-term research initiatives in aircraft structural performance
+      and digital twin development.
+    </p>
+  </div>
+</div>
 
 ---
 
@@ -102,7 +120,7 @@ While I did not develop the digital twin itself, my work provided **validated st
 <div class="tools-used">
 <h3>Tools Used</h3>
 <ul>
-  <li>Excel (data processing, specimen tracking, macro-enabled reports)</li>
+  <li>Excel</li>
   <li>Autodesk Inventor</li>
   <li>ANSYS Mechanical</li>
   <li>VABS</li>

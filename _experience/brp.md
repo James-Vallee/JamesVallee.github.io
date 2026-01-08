@@ -9,10 +9,24 @@ date: 2025-05-01
 start_date: 2025-05-01
 end_date: 2025-08-31
 ---
+<div class="overview-block">
+  <div class="overview-logo">
+    <img src="/assets/images/BRP_inc_logo__1_-removebg-preview.png" alt="BRP Logo">
+  </div>
 
-## Overview
-
-During my internship at Bombardier Recreational Products, I worked within the Predictive Engineering team, contributing to simulation-driven development and vehicle testing across multiple recreational platforms. My focus was on **multibody dynamics, data analysis, and validation of simulation models using physical test data**.  
+  <div class="overview-text">
+    <h2>Overview</h2>
+    <p>
+      During my internship at Bombardier Recreational Products, I worked within the
+      Predictive Engineering team, contributing to simulation-driven development and
+      vehicle testing across multiple recreational platforms.
+    </p>
+    <p>
+      My focus was on <strong>multibody dynamics, data analysis, and validation of
+      simulation models using physical test data</strong>.
+    </p>
+  </div>
+</div>
 
 ---
 
@@ -30,7 +44,7 @@ During my internship at Bombardier Recreational Products, I worked within the Pr
   </div>
 
 
-  <div class="section-image" style="flex: 1 1 400px;">
+  <div class="section-image-brp" style="flex: 1 1 400px;">
     <img src="/assets/images/BRP/2007_Bombardier_XRS_800.jpg" alt="BRP Ski-doo" style="width:100%; height:auto; border-radius:8px;" data-credit="Melensdad / Wikimedia Commons / CC BY 2.5">
   </div>   
 
@@ -53,7 +67,7 @@ During my internship at Bombardier Recreational Products, I worked within the Pr
     </ul>
   </div>
 
-  <div class="section-image" style="flex: 1 1 400px;">
+  <div class="section-image-brp" style="flex: 1 1 200px;">
     <img src="/assets/images/BRP/Can-Am_Ryker_IMG_6725.jpg" alt="BRP Ski-doo" style="width:100%; height:auto; border-radius:8px;" data-credit="Alexander Migl / Wikimedia Commons / CC BA-SA 4.0">
   </div>   
 </div>
