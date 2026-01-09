@@ -1,1 +1,0 @@
-# JamesVallee.github.io
